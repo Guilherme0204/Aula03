@@ -3,11 +3,9 @@ const form = document.getElementById("contact-form");
 function register(name, email, message) {
     const nome = form.elements["name"].value;
     const mensagem = form.elements["message"].value;
-    if (nome.length === 0) {
-        alert("Nome obrigatorio");
-        return
-    } else if (mensagem.length === 0) {
-        alert("Mensagem obrigatoria")
+    const emaill = form.elements["message"].value;
+    if (nome.length === 0 || mensagem.length === 0 || emaill.length === 0) {
+        alert("Todos os campos são obrigatórios");
         return
     } else {
         alert(`Nome: ${name} Email: ${email} Mensagem: ${message}`);
